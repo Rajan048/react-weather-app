@@ -1,0 +1,101 @@
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+/* Animated Gradient Background using your palette */
+body {
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(-45deg, #87CEEB, #C7B8EA, #C9E4CA, #F7D2C4, #FFC5C5);
+  background-size: 400% 400%;
+  animation: gradientMove 15s ease infinite;
+  overflow: hidden;
+  color: #333;
+}
+
+/* Gradient animation */
+@keyframes gradientMove {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+/* App Container */
+#root {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+/* Weather Card */
+.weather-card {
+  background: rgba(255, 255, 255, 0.25);
+  backdrop-filter: blur(15px);
+  border-radius: 25px;
+  padding: 2.5rem;
+  text-align: center;
+  box-shadow: 0 10px 35px rgba(0, 0, 0, 0.25);
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+.weather-card:hover {
+  transform: scale(1.06);
+  box-shadow: 0 15px 50px rgba(0, 0, 0, 0.35);
+}
+
+/* Titles and text */
+h1, h2, h3, p {
+  margin-bottom: 12px;
+  color: #333;
+}
+
+/* Button styling */
+button {
+  background: linear-gradient(135deg, #FFC5C5, #F7D2C4);
+  color: #333;
+  border: none;
+  border-radius: 30px;
+  padding: 12px 25px;
+  font-weight: 600;
+  cursor: pointer;
+  font-size: 1rem;
+  letter-spacing: 0.5px;
+  transition: all 0.3s ease;
+  box-shadow: 0 5px 15px rgba(255, 197, 197, 0.4);
+}
+
+button:hover {
+  transform: translateY(-3px) scale(1.05);
+  box-shadow: 0 8px 20px rgba(255, 197, 197, 0.6);
+}
+
+/* Floating interactive shapes */
+@keyframes float {
+  0% { transform: translateY(0px) rotate(0deg); opacity: 0.8; }
+  50% { transform: translateY(-15px) rotate(10deg); opacity: 1; }
+  100% { transform: translateY(0px) rotate(0deg); opacity: 0.8; }
+}
+
+.shape {
+  position: absolute;
+  width: 100px;
+  height: 50px;
+  border-radius: 50%;
+  filter: blur(10px);
+  animation: float 6s ease-in-out infinite;
+}
+
+/* Shapes in your colors */
+.shape.shape1 { background: rgba(135, 206, 235, 0.4); top: 10%; left: 15%; }  /* Light Blue */
+.shape.shape2 { background: rgba(199, 184, 234, 0.4); top: 70%; left: 70%; }  /* Very Light Muted Indigo */
+.shape.shape3 { background: rgba(201, 228, 202, 0.4); top: 40%; left: 50%; }  /* Very Light Muted Green */
+.shape.shape4 { background: rgba(247, 210, 196, 0.4); top: 20%; left: 80%; }  /* Very Light Orange */
+.shape.shape5 { background: rgba(255, 197, 197, 0.4); top: 60%; left: 20%; }  /* Very Light Vibrant Red */

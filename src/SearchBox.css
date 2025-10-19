@@ -1,0 +1,91 @@
+/* 🌤 Center and style the entire search section */
+.SearchBox {
+  text-align: center;
+  margin: 40px auto;
+  padding: 30px;
+  width: 90%;
+  max-width: 400px;
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 20px;
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.25);
+  animation: fadeIn 1s ease-in-out;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* 🌀 Hover animation */
+.SearchBox:hover {
+  transform: scale(1.03);
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.3);
+}
+
+/* 🧠 Heading style */
+.SearchBox h3 {
+  font-size: 1.6rem;
+  color: #1e293b;
+  margin-bottom: 20px;
+  font-weight: 600;
+  background: linear-gradient(90deg, #007bff, #00c6ff);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* ✏️ TextField customization */
+.MuiTextField-root {
+  width: 100%;
+  background: rgba(255, 255, 255, 0.9);
+  border-radius: 10px;
+  transition: 0.3s ease;
+}
+
+.MuiOutlinedInput-root.Mui-focused fieldset {
+  border-color: #007bff !important;
+  box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+}
+
+/* 🎯 Button styling */
+.MuiButton-root {
+  width: 100%;
+  border-radius: 10px;
+  padding: 10px 0;
+  font-size: 1rem;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  background: linear-gradient(135deg, #007bff, #00c6ff);
+  transition: all 0.3s ease;
+}
+
+.MuiButton-root:hover {
+  background: linear-gradient(135deg, #00c6ff, #007bff);
+  transform: translateY(-3px);
+  box-shadow: 0 8px 15px rgba(0, 123, 255, 0.3);
+}
+
+/* ⚠️ Error text styling */
+.SearchBox p {
+  color: #dc2626;
+  font-weight: 500;
+  font-size: 0.9rem;
+  margin-top: 12px;
+  animation: shake 0.3s ease-in-out;
+}
+
+/* ✨ Animations */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes shake {
+  0%, 100% { transform: translateX(0); }
+  25% { transform: translateX(-5px); }
+  50% { transform: translateX(5px); }
+  75% { transform: translateX(-5px); }
+}

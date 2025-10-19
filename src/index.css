@@ -1,0 +1,63 @@
+/* 🌤️ Global Weather App Styling */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap');
+
+html, body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  font-family: 'Poppins', sans-serif;
+  background: linear-gradient(135deg, #89f7fe, #66a6ff);
+  background-attachment: fixed;
+  color: #b5c9ea;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* 🌎 Root container styling */
+#root {
+  width: 100%;
+  max-width: 1200px;
+  padding: 30px;
+  border-radius: 25px;
+  box-shadow: 0 10px 35px rgba(0, 0, 0, 0.25);
+  backdrop-filter: blur(12px);
+  background: rgba(255, 255, 255, 0.25);
+  border: 1px solid rgba(255, 255, 255, 0.4);
+  animation: fadeIn 1s ease-in-out;
+}
+
+/* 🌈 Scrollbar customization (optional but stylish) */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(135deg, #007bff, #00c6ff);
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: rgba(255, 255, 255, 0.2);
+}
+
+/* 💫 Fade-in animation */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(25px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* 🌤 Responsive adjustments */
+@media (max-width: 768px) {
+  #root {
+    padding: 20px;
+    width: 90%;
+    border-radius: 15px;
+  }
+}
